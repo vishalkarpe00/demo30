@@ -1,0 +1,828 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic profile of Dr. Meetu Joshi, Associate Professor at LJ University.">
+  <title>Dr. Meetu Joshi | Academic Profile</title>
+
+  <style>
+    :root {
+      --navy: #14233b;
+      --blue: #3157a4;
+      --teal: #1c9b91;
+      --ink: #263247;
+      --muted: #657187;
+      --paper: #ffffff;
+      --soft: #f3f6fb;
+      --line: #e2e8f1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--soft);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(1060px, 100% - 40px);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    .hero {
+      color: white;
+      background: linear-gradient(
+        125deg,
+        #14233b 0%,
+        #244b82 62%,
+        #1c9b91 100%
+      );
+      padding: 56px 20px 64px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 58px;
+    }
+
+    .brand {
+      font-size: .92rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: .92rem;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.6fr .8fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .17em;
+      font-size: .76rem;
+      font-weight: 700;
+      color: #c8f4ed;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: clamp(2.5rem, 6vw, 4.6rem);
+      line-height: 1.06;
+    }
+
+    .role {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .institution {
+      color: #e3ebfa;
+    }
+
+    .hero-summary {
+      max-width: 660px;
+      margin: 22px 0 26px;
+      color: #edf3ff;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--navy);
+    }
+
+    .btn-outline {
+      border: 1px solid white;
+      color: white;
+    }
+
+    .profile-mark {
+      width: 250px;
+      aspect-ratio: 1;
+      margin: auto;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.45);
+      background: rgba(255,255,255,.12);
+      display: grid;
+      place-items: center;
+    }
+
+    .profile-mark span {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    /* MAIN SECTIONS */
+
+    main {
+      padding: 42px 0 60px;
+    }
+
+    section {
+      margin-bottom: 26px;
+    }
+
+    .panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: 0 10px 30px rgba(25,42,70,.04);
+    }
+
+    .section-kicker {
+      color: var(--teal);
+      font-size: .76rem;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      font-weight: 800;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 2rem;
+      margin: 4px 0 16px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 26px;
+    }
+
+    /* STATISTICS */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .stat {
+      background: #f5f8fd;
+      border: 1px solid var(--line);
+      padding: 18px;
+      border-radius: 14px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--blue);
+      font-size: 1.55rem;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* EXPERTISE */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .interest {
+      padding: 20px;
+      border-radius: 15px;
+      background: #f7f9fd;
+      border: 1px solid var(--line);
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+      margin-bottom: 12px;
+    }
+
+    .interest h3 {
+      color: var(--navy);
+      font-size: 1.05rem;
+      margin-bottom: 7px;
+    }
+
+    .interest p {
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .chip {
+      background: #edf4ff;
+      color: #294a82;
+      border: 1px solid #d9e6fa;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: .9rem;
+      font-weight: 600;
+    }
+
+    /* TIMELINE */
+
+    .timeline {
+      border-left: 2px solid #dbe5f4;
+      margin: 10px 0 0 7px;
+      padding-left: 22px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 20px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -29px;
+      top: 7px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--teal);
+      border: 3px solid white;
+    }
+
+    .timeline-item h3 {
+      color: var(--navy);
+      font-size: 1.02rem;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    /* CONTACT */
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .contact-pill {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 14px;
+      background: #f8faff;
+      font-size: .92rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px 20px 30px;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    /* =================================
+       RESPONSIVE MEDIA QUERIES
+       ================================= */
+
+    /* Large laptops and tablets */
+
+    @media screen and (max-width: 1024px) {
+
+      .wrap {
+        width: 92%;
+      }
+
+      .hero-grid {
+        gap: 25px;
+      }
+
+      .profile-mark {
+        width: 200px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .panel {
+        padding: 28px;
+      }
+    }
+
+    /* Tablets */
+
+    @media screen and (max-width: 768px) {
+
+      .hero {
+        padding: 35px 15px 45px;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 35px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .profile-mark {
+        width: 150px;
+        grid-row: 1;
+      }
+
+      .hero-summary {
+        margin: 18px auto 25px;
+      }
+
+      .actions {
+        justify-content: center;
+      }
+
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      main {
+        padding: 30px 0;
+      }
+    }
+
+    /* Mobile phones */
+
+    @media screen and (max-width: 600px) {
+
+      .wrap {
+        width: 94%;
+      }
+
+      .hero {
+        padding: 25px 10px 35px;
+      }
+
+      .nav {
+        align-items: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 10px 15px;
+      }
+
+      .nav-links a {
+        font-size: .85rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      .role {
+        font-size: 1.05rem;
+      }
+
+      .institution,
+      .hero-summary {
+        font-size: .92rem;
+      }
+
+      .profile-mark {
+        width: 120px;
+      }
+
+      .profile-mark span {
+        font-size: 3rem;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .panel {
+        padding: 22px 17px;
+        border-radius: 15px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .stat {
+        padding: 12px;
+      }
+
+      .stat strong {
+        font-size: 1.25rem;
+      }
+
+      .stat span {
+        font-size: .8rem;
+      }
+
+      .actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        text-align: center;
+      }
+
+      .contact-row {
+        flex-direction: column;
+      }
+
+      .contact-pill {
+        overflow-wrap: anywhere;
+      }
+    }
+
+    /* Very small mobile phones */
+
+    @media screen and (max-width: 360px) {
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      .nav-links {
+        gap: 8px;
+      }
+
+      .nav-links a {
+        font-size: .78rem;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .panel {
+        padding: 18px 13px;
+      }
+    }
+
+    /* Print layout */
+
+    @media print {
+
+      body {
+        background: white;
+      }
+
+      .nav,
+      .actions {
+        display: none;
+      }
+
+      .panel {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .hero {
+        padding: 30px 20px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="hero" id="top">
+    <div class="wrap">
+
+      <nav class="nav">
+        <div class="brand">Academic Profile</div>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#journey">Academic Journey</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero-grid">
+
+        <div>
+          <div class="eyebrow">Educator · Researcher · Mentor</div>
+
+          <h1>Dr. Meetu Joshi</h1>
+
+          <p class="role">Associate Professor</p>
+
+          <p class="institution">
+            LJ School of Computer Applications and Technology · LJ University
+          </p>
+
+          <p class="hero-summary">
+            Dedicated to computer science education, applied research,
+            and helping students build practical skills for a
+            technology-driven future.
+          </p>
+
+          <div class="actions">
+            <a class="btn btn-light" href="#about">Explore Profile</a>
+            <a class="btn btn-outline" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+
+        <div class="profile-mark">
+          <span>MJ</span>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+
+  <main class="wrap">
+
+    <!-- ABOUT -->
+
+    <section id="about" class="panel">
+
+      <div class="section-kicker">Introduction</div>
+      <h2>About Me</h2>
+
+      <div class="two-col">
+
+        <div>
+          <p>
+            I am an academic professional in Computer Applications,
+            committed to creating engaging, practice-oriented
+            learning experiences. My teaching and academic interests
+            span programming, web technologies, cloud computing,
+            and emerging applications of artificial intelligence.
+          </p>
+
+          <br>
+
+          <p>
+            I value project-based learning, student mentoring,
+            and the responsible use of technology to connect
+            classroom concepts with real-world challenges.
+          </p>
+        </div>
+
+        <div class="stats">
+
+          <div class="stat">
+            <strong>2009</strong>
+            <span>Academic journey at LJ</span>
+          </div>
+
+          <div class="stat">
+            <strong>2020</strong>
+            <span>Ph.D. in Cloud Computing</span>
+          </div>
+
+          <div class="stat">
+            <strong>Teaching</strong>
+            <span>Learning through practice</span>
+          </div>
+
+          <div class="stat">
+            <strong>Research</strong>
+            <span>Technology and innovation</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+
+    <section id="expertise" class="panel">
+
+      <div class="section-kicker">Areas of Expertise</div>
+      <h2>Teaching & Research Interests</h2>
+
+      <div class="cards">
+
+        <article class="interest">
+          <div class="icon">&lt;/&gt;</div>
+          <h3>Programming & Web Design</h3>
+          <p>
+            Programming fundamentals, C, web technologies,
+            and building interactive digital experiences.
+          </p>
+        </article>
+
+        <article class="interest">
+          <div class="icon">☁</div>
+          <h3>Cloud Computing</h3>
+          <p>
+            Cloud-based systems, distributed environments,
+            and trust and security challenges.
+          </p>
+        </article>
+
+        <article class="interest">
+          <div class="icon">AI</div>
+          <h3>AI & Machine Learning</h3>
+          <p>
+            Machine learning concepts, applied AI,
+            and responsible integration of AI into education.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="chips">
+        <span class="chip">Computer Science Education</span>
+        <span class="chip">Student Mentoring</span>
+        <span class="chip">Research Guidance</span>
+        <span class="chip">Responsible AI</span>
+        <span class="chip">Project-Based Learning</span>
+      </div>
+
+    </section>
+
+    <!-- ACADEMIC JOURNEY -->
+
+    <section id="journey" class="panel">
+
+      <div class="section-kicker">Background</div>
+      <h2>Academic Journey</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <h3>Associate Professor</h3>
+          <p>
+            LJ School of Computer Applications and Technology,
+            LJ University.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Ph.D. in Cloud Computing · 2020</h3>
+          <p>
+            Doctoral research in the field of cloud computing.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Teaching, Mentoring & Academic Engagement</h3>
+          <p>
+            Supporting student learning, research activities,
+            academic initiatives, and practical skill development.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+
+    <section class="panel">
+
+      <div class="section-kicker">Academic Philosophy</div>
+
+      <h2>Learn by Doing. Build for Tomorrow.</h2>
+
+      <p>
+        My approach emphasizes strong fundamentals, hands-on practice,
+        collaborative projects, continuous learning, and thoughtful
+        adoption of emerging technologies. I aim to help learners
+        become confident problem-solvers who can adapt to a changing
+        digital world.
+      </p>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="panel">
+
+      <div class="section-kicker">Connect</div>
+
+      <h2>Contact & Professional Links</h2>
+
+      <p>
+        Connect with me through my professional platforms.
+      </p>
+
+      <div class="contact-row">
+
+        <div class="contact-pill">
+          Email: Add your official email
+        </div>
+
+        <div class="contact-pill">
+          LinkedIn: Add your profile URL
+        </div>
+
+        <div class="contact-pill">
+          Google Scholar: Add your profile URL
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © <span id="year">2026</span>
+    Dr. Meetu Joshi · Academic Profile
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
